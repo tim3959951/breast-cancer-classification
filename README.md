@@ -84,22 +84,17 @@ This project applies various machine learning models to classify **breast cancer
 ---
 
 ## 📂 Repository Structure  
-```bash
-📁 Breast_Cancer_Classification
-│── 📜 README.md (this file)
-│── 📜 breast_cancer_model.ipynb (Jupyter Notebook with code)
-│── 📂 data/
-│   ├── breast_cancer_data.csv (Dataset)
-│── 📂 models/
-│   ├── best_model.pkl (Saved trained model)
-│── 📂 visualizations/
-│   ├── final_roc_curve.png
-│   ├── tuned_conf_matrix_logreg.png
-│   ├── tuned_conf_matrix_rf.png
-│   ├── shap_summary_plot_malignant.png
-│   ├── shap_feature_importance_malignant.png
-│   ├── shap_dependence_bare_nuclei_malignant.png
-```
+
+
+| File/Folder             | Description                                      |
+|-------------------------|--------------------------------------------------|
+| 📂 src                 | Contains all core scripts                        |
+| 📂 visualizations      | Stores generated plots & SHAP      |
+| 📄 requirements.txt    | Python dependencies                              |
+| 📄 README.md           | Project documentation                           |
+| 📄 .gitignore          | Ignore unnecessary files                         |
+| 📄 2019_IMBD_1D_CNN.ipynb | Main Jupyter Notebook |
+
 
 ---
 ## 🏆 Key Takeaways  
