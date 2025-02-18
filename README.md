@@ -93,7 +93,7 @@ This project applies various machine learning models to classify **breast cancer
 | 📄 requirements.txt    | Python dependencies                              |
 | 📄 README.md           | Project documentation                           |
 | 📄 .gitignore          | Ignore unnecessary files                         |
-| 📄 2019_IMBD_1D_CNN.ipynb | Main Jupyter Notebook |
+| 📄 breast_cancer_classification_with_shap.ipynb | Main Jupyter Notebook |
 
 
 ---
