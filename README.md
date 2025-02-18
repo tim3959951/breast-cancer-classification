@@ -124,3 +124,10 @@ This project applies various machine learning models to classify **breast cancer
 | 📄 README.md           | Project documentation                           |
 | 📄 .gitignore          | Ignore unnecessary files                         |
 | 📄 breast_cancer_classification_with_shap.ipynb | Main Jupyter Notebook |
+
+---
+## 🚀 How to Run
+Run the full pipeline with:
+```bash
+python src/main.py
+```
