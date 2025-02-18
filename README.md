@@ -12,17 +12,6 @@ This project applies various machine learning models to classify **breast cancer
 
 ---
 
-## 📊 Dataset Information  
-- The dataset consists of **breast cancer cell features** extracted from microscopic images.  
-- Features include:  
-  - `Bare_Nuclei` – Most influential feature in predicting malignancy  
-  - `Clump_Thickness`, `Uniformity_Of_Cell_Size`, `Bland_Chromatin`, etc.  
-- **Target Variable:**  
-  - `0` → Benign Tumor  
-  - `1` → Malignant Tumor  
-
----
-
 ## ⚙️ Machine Learning Pipeline  
 1️⃣ **Data Preprocessing**  
    - Handled missing values (`Bare_Nuclei` contained `?` values)  
@@ -37,9 +26,16 @@ This project applies various machine learning models to classify **breast cancer
    - Compared performance using **ROC Curves & Confusion Matrices**  
    - Identified best-performing model: **Logistic Regression**  
 
-4️⃣ **Explainability with SHAP**  
-   - Identified key features driving predictions  
-   - Explored **feature interactions** (e.g., `Bare_Nuclei` & `Uniformity_Of_Cell_Size`)  
+---
+
+## 📊 Dataset Information  
+- The dataset consists of **breast cancer cell features** extracted from microscopic images.  
+- Features include:  
+  - `Bare_Nuclei` – Most influential feature in predicting malignancy  
+  - `Clump_Thickness`, `Uniformity_Of_Cell_Size`, `Bland_Chromatin`, etc.  
+- **Target Variable:**  
+  - `0` → Benign Tumor  
+  - `1` → Malignant Tumor  
 
 ---
 
@@ -53,26 +49,43 @@ This project applies various machine learning models to classify **breast cancer
 | LightGBM | 95.62% | 0.9864 |  
 | MLP | 94.89% | **0.9899** |  
 
-🔹 **ROC Curve Comparison:**  
-![ROC Curve](visualizations/final_roc_curve.png)  
+🔹 **ROC Curve Comparison** (Higher AUC means better classification):  
+<img src="visualizations/final_roc_curve.png" width="600">
 
-🔹 **Confusion Matrices:**  
-- **Logistic Regression:**  
-  ![Confusion Matrix - Logistic Regression](visualizations/tuned_conf_matrix_logreg.png)  
-- **Random Forest:**  
-  ![Confusion Matrix - Random Forest](visualizations/tuned_conf_matrix_rf.png)  
+---
+
+### **Confusion Matrices** (Compare Model Performance)  
+<table>
+  <tr>
+    <td align="center"><b>Logistic Regression</b></td>
+    <td align="center"><b>Random Forest</b></td>
+  </tr>
+  <tr>
+    <td><img src="visualizations/tuned_conf_matrix_logreg.png" width="400"></td>
+    <td><img src="visualizations/tuned_conf_matrix_rf.png" width="400"></td>
+  </tr>
+</table>
 
 ---
 
 ## 🛠️ SHAP Analysis - Feature Importance (Malignant Tumors)  
-### **🔍 Summary Plot**  
-![SHAP Summary Plot](visualizations/shap_summary_plot_malignant.png)  
+📌 **SHAP analysis helps explain how each feature impacts the model's decision.**  
 
-### **🔍 Feature Importance Ranking**  
-![SHAP Feature Importance](visualizations/shap_feature_importance_malignant.png)  
+### **🔍 Feature Importance & Dependence**  
+<table>
+  <tr>
+    <td align="center"><b>SHAP Feature Importance</b></td>
+    <td align="center"><b>SHAP Dependence - Bare Nuclei</b></td>
+  </tr>
+  <tr>
+    <td><img src="visualizations/shap_feature_importance_malignant.png" width="400"></td>
+    <td><img src="visualizations/shap_dependence_bare_nuclei_malignant.png" width="400"></td>
+  </tr>
+</table>
 
-### **🔍 Dependence Plot - `Bare_Nuclei` Impact on Malignancy**  
-![SHAP Dependence - Bare Nuclei](visualizations/shap_dependence_bare_nuclei_malignant.png)  
+### **🔍 SHAP Summary Plot**  
+📌 **The higher the SHAP value, the stronger the feature's influence on malignancy classification.**  
+<img src="visualizations/shap_summary_plot_malignant.png" width="600">
 
 ---
 
@@ -83,26 +96,19 @@ This project applies various machine learning models to classify **breast cancer
 
 ---
 
-## 📂 Repository Structure  
-
-
-| File/Folder             | Description                                      |
-|-------------------------|--------------------------------------------------|
-| 📂 src                 | Contains all core scripts                        |
-| 📂 visualizations      | Stores generated plots & SHAP      |
-| 📄 requirements.txt    | Python dependencies                              |
-| 📄 README.md           | Project documentation                           |
-| 📄 .gitignore          | Ignore unnecessary files                         |
-| 📄 breast_cancer_classification_with_shap.ipynb | Main Jupyter Notebook |
-
-
----
 ## 🏆 Key Takeaways  
 ✅ **Logistic Regression is the best-performing model (AUC = 0.9927).**  
 ✅ **SHAP analysis confirms `Bare_Nuclei` as the most critical feature.**  
 ✅ **Feature interactions (e.g., `Bare_Nuclei` & `Uniformity_Of_Cell_Size`) are important for prediction.**  
+  
 
-📌 **This project is an excellent demonstration of AI & Machine Learning in healthcare!** 🚀  
-
-
-
+---
+## 📂 Repository Structure  
+| File/Folder             | Description                                      |
+|-------------------------|--------------------------------------------------|
+| 📂 src                 | Contains all core scripts                        |
+| 📂 visualizations      | Stores generated plots & SHAP analysis images    |
+| 📄 requirements.txt    | Python dependencies                              |
+| 📄 README.md           | Project documentation                           |
+| 📄 .gitignore          | Ignore unnecessary files                         |
+| 📄 breast_cancer_classification_with_shap.ipynb | Main Jupyter Notebook |
