@@ -119,6 +119,7 @@ This project applies various machine learning models to classify **breast cancer
 |-------------------------|--------------------------------------------------|
 | 📂 src                 | Contains all core scripts                        |
 | 📂 visualizations      | Stores generated plots & SHAP analysis images    |
+| 📂 experiments                 | Model experiments & evaluation |
 | 📄 requirements.txt    | Python dependencies                              |
 | 📄 README.md           | Project documentation                           |
 | 📄 .gitignore          | Ignore unnecessary files                         |
