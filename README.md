@@ -69,7 +69,7 @@ This project applies various machine learning models to classify **breast cancer
 ---
 
 ## 🛠️ SHAP Analysis - Feature Importance (Malignant Tumors)  
-📌 **SHAP analysis helps explain how each feature impacts the model's decision.**  
+📌 **SHAP analysis helps explain how each feature impacts the model's decision, ensuring AI transparency in healthcare applications.**  
 
 ### **🔍 Feature Importance & Dependence**  
 <table>
@@ -83,9 +83,20 @@ This project applies various machine learning models to classify **breast cancer
   </tr>
 </table>
 
+📌 **Key Insights:**  
+- `Bare_Nuclei` is the strongest predictor of malignancy.  
+- The **dependence plot** shows that higher `Bare_Nuclei` values increase malignancy probability, interacting with `Uniformity_Of_Cell_Size`.  
+
+---
+
 ### **🔍 SHAP Summary Plot**  
-📌 **The higher the SHAP value, the stronger the feature's influence on malignancy classification.**  
+📌 **This plot ranks features based on their impact on malignancy predictions.**  
 <img src="visualizations/shap_summary_plot_malignant.png" width="600">
+
+📌 **Key Takeaways:**  
+- `Bare_Nuclei` contributes most to model predictions.  
+- Higher values of `Uniformity_Of_Cell_Size` also increase malignancy probability.  
+- Feature interactions (e.g., `Bare_Nuclei` & `Uniformity_Of_Cell_Size`) play a key role.  
 
 ---
 
