@@ -1,0 +1,36 @@
+# Ignore Jupyter Notebook checkpoints
+__pycache__/
+.ipynb_checkpoints/
+
+# Ignore dataset and large files
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# Ignore trained models and serialized files
+models/*.pkl
+models/*.h5
+models/*.joblib
+
+# Ignore outputs and logs
+*.log
+*.out
+*.err
+
+# Ignore virtual environment files
+venv/
+.env
+*.env
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Python cache files
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore SHAP analysis output files
+shap_outputs/
+shap_analysis/
