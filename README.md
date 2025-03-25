@@ -40,17 +40,25 @@ This project applies various machine learning models to classify **breast cancer
 ---
 
 ## 📈 Model Performance  
-| **Model** | **Accuracy** | **AUC** |  
-|-----------|-------------|---------|  
-| Logistic Regression | **96.35%** | **0.9927** |  
-| Random Forest | 96.35% | 0.9850 |  
-| SVM | 95.62% | 0.9700 |  
-| XGBoost | **97.08%** | 0.9874 |  
-| LightGBM | 95.62% | 0.9864 |  
-| MLP | 94.89% | **0.9899** |  
+| **Model**             | **Accuracy** | **AUC**  | **Precision** | **Recall** | **F1-score** |
+|------------------------|--------------|----------|----------------|-------------|--------------|
+| Logistic Regression    | 96.35%        | 99.27%   | 92.16%         | 97.92%      | 94.95%       |
+| Random Forest          | 96.35%        | 98.50%   | 92.00%         | 95.83%      | 93.88%       |
+| SVM                    | 95.62%        | 97.00%   | 92.00%         | 95.83%      | 93.88%       |
+| **XGBoost**            | **97.08%**    | 98.74%   | 92.31%         | **100.0%**  | **96.00%**   |
+| LightGBM               | 95.62%        | 98.64%   | **93.75%**     | 93.75%      | 93.75%       |
+| MLP                    | 94.89%        | **98.99%** | 91.84%         | 93.75%      | 92.78%       |
+
 
 🔹 **ROC Curve Comparison** (Higher AUC means better classification):  
 <img src="visualizations/final_roc_curve.png" width="600">
+
+📊 **F1-score vs AUC Comparison**
+> F1-score measures balance between precision and recall. AUC reflects overall classification power.
+
+<img src="visualizations/f1_vs_auc_barplot.png" width="600">
+
+- Based on F1-score and recall, XGBoost was selected as the final model due to its perfect identification of malignant cases.
 
 ---
 
